@@ -1,0 +1,342 @@
+body{
+    margin: 0px;
+    font-family: 'Segoe UI', sans-serif;
+    overflow-x: hidden;
+}
+
+/* MENU HEADER */
+header{
+    border: 2px;
+    border-style:solid;
+    border-top-style: none;
+    border-left-style: none;
+    border-right-style: none;
+    border-color: black;
+    background: #00b4d8;
+    position: fixed;
+    width: -moz-available;
+    width: -webkit-fill-available;
+    z-index: 1000;
+}
+
+header nav{
+    display: flex;
+    justify-content: space-between;
+    height: 100px;
+}
+
+header nav div:last-child{
+    display: flex;
+    justify-content: flex-end;
+    gap: 2vw;
+    position: relative;
+    width: auto;
+    top: 1vh;
+    right: 5vw;
+    font-size: 3ch;
+    text-decoration:none;
+    height: fit-content;
+}
+
+header nav div:last-child a{
+    display: inline;
+    color: black;
+    margin-top: 25px;
+    background-color: white;
+    font-style: italic;
+    text-decoration: none;
+    border:2px solid black;
+    border-radius:20px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+header nav div:last-child a:hover {
+    background-color: lightgray;
+}
+
+header img {
+    max-width: 128px;
+    border-radius: 50%;
+    margin: 0.5rem;
+}
+
+.placeholder {
+    height: 100px;
+}
+
+/* ACCUEIL */
+.accueil {
+    min-height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-position:center;
+    background-repeat: no-repeat;
+    background-color: black;
+    height: 900px;
+}
+
+
+.hero {
+    background: url('image/logo_complet.jpg') no-repeat center center/cover;
+    position: relative;
+    height: 100%;
+}
+  
+.overlay {
+    background: rgba(0, 0, 0, 0.6); /* effet assombri */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    height: 100%;
+    width: 100vw;
+}
+  
+.overlay h1 {
+    font-size: 3rem;
+    margin:0;
+    margin-top: 8%;
+    animation: fadeIn 2s ease-in-out;
+}
+  
+.overlay h1 span {
+    color: #00b4d8;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* BIO */
+.bio {
+    background: linear-gradient(to bottom, #a8edea, #fed6e3);
+    padding-top: 2rem;
+}
+
+.conteneur {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 42rem;
+}
+
+h2 {
+    text-align: center;
+    font-size: 4ch;
+    margin: 0;
+    color: #0077b6;
+}
+
+.bio .conteneur div {
+    width: 25vw;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    overflow: hidden;
+    text-align: center;
+    font-weight: bold;
+}
+
+.bio img {
+    width: inherit;
+}
+
+/*avis*/
+.avis {
+    min-height: 900px;
+    background: linear-gradient(to top, #a8edea, #fed6e3);
+    padding-bottom: 5rem;
+}
+
+.review {
+    width: 30vw;
+    min-width: 350px;
+    min-height: 240px;
+    align-content: center;
+    text-align: center;
+    border: 2px solid gray;
+    margin-left: 10%;
+    margin-top: 3rem;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    margin-right: 10%;
+}
+
+.review:nth-child(2) {
+    margin-top: 5rem;
+}
+
+.review:nth-child(3) {
+    margin-left: auto;
+    margin-right: 8%;
+}
+
+.conteneur_2 {
+    display: flex;
+    justify-content: space-around;
+    border-top: 1px solid gray;
+    color: #555;
+    margin-top: 4rem;
+}
+
+.review:nth-child(2) .conteneur_2 {
+    margin-top: 5.5rem !important;
+}
+
+.review div:first-child {
+    color: gold;
+    font-size: 2rem;
+}
+
+.review p {
+    min-height: 20%;
+    margin: 1rem;
+    font-size: 1.1rem;
+}
+
+.review img {
+    height: 64px;
+    width: 64px;
+}
+
+/*FAQ*/
+.faq {
+    background-color: #a8edea;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 8rem;
+} 
+
+/* MENU TAB */
+.tab-container {
+    display: flex;
+    width: 40%;
+    height: 100%;
+    background-color: #fdf7f0;
+    border: 2px solid gray;
+    margin-top: 5rem;
+    border-radius: 20px;
+    flex-direction: column;
+}
+
+.tab {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.tab button {
+    background-color: inherit;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 20px;
+    width: 100%;
+}
+
+.tab button:hover {
+    color:#6E9CFA;
+}
+
+.tab button.active {
+    font-weight: bold;
+    color:#6E9CFA;
+}
+
+.tabcontent {
+    display: none;
+    text-align: center;
+    padding-left: 5%;
+    padding-right: 5%;
+    border-top: 2px solid gray;
+} 
+
+.tabcontent:nth-child(2), .tabcontent:nth-child(4), .tabcontent:nth-child(6) {
+    border-bottom: 2px solid gray;
+}
+
+/*footer*/
+footer {
+    display: flex;
+    justify-content: center;
+    background: #00b4d8;
+    height: 5%;
+}
+
+footer h3 {
+    margin: 10px;
+}
+
+/* MODE TEL */
+@media screen and (max-width: 768px) {
+
+    /* AVIS */
+    .review {
+        margin: 0 !important;
+    }
+
+    .avis {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+}
+
+@media screen and (max-width: 568px) {
+        /* BIO */
+        .conteneur {
+            flex-direction: column;
+            height: 70rem;
+        }
+    
+        .bio .conteneur div {
+            width: 70vw;
+        }
+
+        /* HEADER */
+        header nav div:first-child {
+            align-content: center;
+        }
+
+        header nav div:last-child {
+            font-size: 2ch;
+            top: 2vh;
+            right: 1%;
+        }
+
+        header img {
+            width: 100px;
+            margin-bottom: 1%;
+            margin-left: 3%;
+        }
+
+        /*FAQ*/
+        .tab-container {
+            width: 80%;
+            margin-top: 3rem;
+        }
+
+        .tabcontent {
+            text-align: justify;
+        }
+
+        
+        .avis {
+            padding-bottom: 4rem;
+        }
+
+        .review:nth-child(2) {
+            margin-top: 10% !important;
+        }
+}
